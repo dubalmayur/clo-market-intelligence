@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
+
   /* Core institutional palette */
-  --color-bg: #111827;
-  --color-bg-sunken: #0b1220;
-  --color-surface: #1f2937;
-  --color-surface-2: #283341;
-  --color-border: #313e4f;
+  --color-bg: #ffffff;
+  --color-bg-sunken: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f3f6;
+  --color-border: #e3e6eb;
   --color-accent: #475569;
-  --color-text: #e5e7eb;
-  --color-text-muted: #9ca3af;
-  --color-text-dim: #6b7280;
+  --color-text: #1a2230;
+  --color-text-muted: #5b6573;
+  --color-text-dim: #8b96a6;
 
   /* Regional series colors */
-  --color-us: #87a8d0;
-  --color-europe: #d2b27a;
+  --color-us: #3a5f8a;
+  --color-europe: #a8762e;
 
   /* Status colors */
-  --color-positive: #74b08a;
-  --color-negative: #c4806f;
-  --color-highlight: #e8c87e;
+  --color-positive: #3f8a5c;
+  --color-negative: #b3554a;
+  --color-highlight: #b8862e;
 }
 
 @theme inline {
@@ -64,14 +66,14 @@ body {
 /* Thin scrollbars for the institutional terminal feel */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-border) transparent;
+  scrollbar-color: #cbd2dc transparent;
 }
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 *::-webkit-scrollbar-thumb {
-  background: var(--color-border);
+  background: #cbd2dc;
   border-radius: 4px;
 }
 *::-webkit-scrollbar-track {
