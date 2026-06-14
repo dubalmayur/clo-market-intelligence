@@ -1,0 +1,20 @@
+id,name,country,hq,region,parent,us_clo_rank,website,description
+blackstone,Blackstone Credit & Insurance,United States,"New York, NY",Global,,1,https://www.blackstone.com,"Credit arm of Blackstone, one of the largest CLO managers globally across both broadly syndicated and private-credit strategies."
+golub-capital,Golub Capital,United States,"New York, NY",US,,2,https://www.golubcapital.com,"Middle-market and private-credit specialist, and one of the largest issuers of middle-market CLOs in the US."
+carlyle,The Carlyle Group,United States,"Washington, D.C.",Global,,3,https://www.carlyle.com,"Global alternative asset manager with a long-established CLO platform active across both US broadly syndicated loan and European CLO markets."
+ares,Ares Management,United States,"Los Angeles, CA",Global,,4,https://www.aresmgmt.com,"Global alternative investment manager with a large credit platform spanning US and European CLOs and direct lending."
+cifc,CIFC Asset Management,United States,"New York, NY",US,,5,https://www.cifc.com,"Specialist credit manager focused on broadly syndicated loan CLOs, consistently ranked among the most active US CLO issuers."
+redding-ridge,Redding Ridge Asset Management,United States,"New York, NY",Global,Apollo Global Management,6,https://www.apollo.com,"CLO management platform affiliated with Apollo, issuing both US and European CLOs."
+ubs-am,UBS Asset Management,Switzerland,Zurich,Global,,7,https://www.ubs.com/global/en/assetmanagement.html,"Global asset manager with a CLO platform covering US broadly syndicated loan strategies."
+blackrock,BlackRock,United States,"New York, NY",Global,,8,https://www.blackrock.com,"World's largest asset manager; significantly expanded its CLO and private-credit footprint following its acquisition of HPS Investment Partners."
+elmwood,Elmwood Asset Management,United Kingdom,London,Global,Onex Corporation,9,https://www.onex.com,"CLO manager affiliated with Onex Credit, active in both US and European CLO markets."
+neuberger-berman,Neuberger Berman,United States,"New York, NY",Global,,10,https://www.nb.com,"Employee-owned global asset manager with an established CLO platform across US and European markets."
+kkr,KKR Credit,United States,"New York, NY",Global,,,https://www.kkr.com,"Credit platform of KKR, active in CLO management across broadly syndicated and private-credit strategies."
+blue-owl,Blue Owl Capital,United States,"New York, NY",US,,,https://www.blueowl.com,"Alternative asset manager with a fast-growing direct lending and CLO platform focused on middle-market and private-credit collateral."
+pgim,PGIM Fixed Income,United States,"Newark, NJ",Global,Prudential Financial,,https://www.pgimfixedincome.com,"Fixed income arm of Prudential Financial, with a long-running CLO management business spanning US and European deals."
+octagon,Octagon Credit Investors,United States,"New York, NY",US,,,https://www.octagoncredit.com,Specialist leveraged loan and CLO manager focused on the US broadly syndicated loan market.
+benefit-street,Benefit Street Partners,United States,"New York, NY",Global,Franklin Templeton,,https://www.benefitstreetpartners.com,"Alternative credit manager owned by Franklin Templeton, combined with Alcentra's CLO platform to cover both US and European markets."
+barings,Barings,United States,"Charlotte, NC",Global,MassMutual,,https://www.barings.com,"Global asset manager owned by MassMutual, with an established CLO platform across both US and European leveraged loan markets."
+goldentree,GoldenTree Asset Management,United States,"New York, NY",Global,,,https://www.goldentree.com,Independent credit-focused asset manager active as a frequent issuer in both US and European CLO markets.
+pinebridge,PineBridge Investments,United States,"New York, NY",Global,,,https://www.pinebridge.com,Global asset manager with a long-standing leveraged finance and CLO management business.
+cvc-credit,CVC Credit,United Kingdom,London,Global,CVC Capital Partners,,https://www.cvc.com,"Credit arm of CVC Capital Partners, one of the most active managers in the European CLO market with a growing US presence."

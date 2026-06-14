@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CLO Market Intelligence
 
-## Getting Started
+A static market-intelligence platform covering the US and European Collateralized Loan
+Obligation (CLO) markets: issuance analytics, 2026 forecasts, and directories of managers,
+arrangers, trustees, administrators and corporate service providers.
 
-First, run the development server:
+**Live site:** https://dubalmayur.github.io/clo-market-intelligence/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Data approach
+
+This is a **Phase 1** build: a fully static Next.js site (no backend, no database) deployed to
+GitHub Pages. Every figure on the site is compiled from **real, publicly available sources**
+(Bloomberg, S&P Global Market Intelligence / LCD, Deutsche Bank Research, PitchBook | LCD, the
+NAIC Capital Markets Bureau, KBRA, and CLO Research / Creditflux), with explicit source name,
+URL, and "as of" date attached to each data point.
+
+Where a precise full-year figure was not available from a public (non-paywalled) source, the
+data point is marked `confidence: "estimated"` with a note explaining the basis for the
+estimate (e.g. derived from a reported year-over-year change, or extrapolated from partial-year
+data).
+
+A comprehensive, deal-by-deal CLO database spanning ten years across both markets — the core
+product of PitchBook | LCD, Creditflux and Trepp — is **not** reproduced here, as it sits behind
+paid subscriptions. The Deal Records page implements the full schema with two real, named deals
+from public press coverage plus clearly-labelled illustrative examples.
+
+See **`/methodology`** on the live site for the full source list and confidence-rating
+explanation.
+
+## Project structure
+
+```
+src/
+  app/                 Next.js App Router pages (one folder per route)
+  components/
+    layout/            Sidebar, header, search, ticker strip
+    ui/                 Card, StatCard, DataTable, SourceTag, etc.
+    charts/             Recharts-based issuance and forecast charts
+  data/                Typed data modules — the single source of truth.
+                       Every figure has source / sourceUrl / asOf fields.
+  lib/                 Client-side search index
+public/data/           CSV/JSON exports of the data in src/data/ (Data Downloads page)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Updating data
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Edit the relevant file in `src/data/` (e.g. `issuance.ts`, `forecasts.ts`, `managers.ts`).
+2. Add/update the citation in `src/data/sources.ts`.
+3. If the figure is also exported for download, update the matching file in `public/data/`.
+4. `npm run build` to verify, then push to `main` — GitHub Actions redeploys automatically.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Local development
 
-## Learn More
+```bash
+npm install
+npm run dev      # http://localhost:3000, no base path
+npm run build    # static export to ./out, with /clo-market-intelligence base path
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Phase 2 (not implemented here)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The original specification also envisioned a database-backed ETL pipeline, a REST API, AI-driven
+analysis, and authenticated access tiers. The `/api-access` page documents the planned REST
+endpoints (with example responses drawn from this platform's real data) as a starting point for
+that work; none of it is live in this static build.
